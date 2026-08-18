@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/DATA_WCONV/R_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_read_width_converter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/DATA_WCONV/W_Conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_write_width_converter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/DATA_WCONV/TB_CON.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_width_converters
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/DATA_WCONV/project_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+
+--- Starting Write Converter Test (Packing) ---
+
+--- Starting Read Converter Test (Unpacking) ---
+[WRITE CONV] Packed 32-bit output mem_wdata = 0x44332211 (mem_wen = 1)
+[READ CONV]  Unpacked 8-bit output rdata = 0xdd (mem_ren = 0)
+[READ CONV]  Unpacked 8-bit output rdata = 0xcc (mem_ren = 0)
+[READ CONV]  Unpacked 8-bit output rdata = 0xbb (mem_ren = 0)
+[READ CONV]  Unpacked 8-bit output rdata = 0xaa (mem_ren = 0)
+
+--- Test Complete ---
+$finish called at time : 155 ns : File "/home/prasanna/Xilinx_workspa/DATA_WCONV/TB_CON.v" Line 105
