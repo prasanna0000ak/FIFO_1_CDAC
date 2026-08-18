@@ -32,7 +32,7 @@ Manages the read pointer and empty-flag logic for a synchronous FIFO. Tracks the
 Inputs:
 * clk, rst: Read domain clock and asynchronous active-high reset.
 * rinc: Read increment signal (asserts when downstream requests data).
-* wbin_sync: Synchronized write pointer from the write domain (used to detect empty condition).
+* wbin_sync:Write pointer from the write side, used to calculate FIFO occupancy and detect the empty condition.
 
 Outputs:
 * rempty: Asserts when read pointer equals the synchronized write pointer (FIFO is empty).
