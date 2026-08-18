@@ -9,7 +9,7 @@ operations. Data becomes available at the output before the user asserts REN
 
 -----------------------------------------------------------RTL-----------------------------------------------------------------------------------------
 
-<img width="1615" height="376" alt="FWFT_RTL" src="https://github.com/user-attachments/assets/f95ea1e7-9ee8-4a1f-affc-0b499608f3ca" />
+<img width="1615" height="376" alt="FWFT_RTL" src="https://github.com/user-attachments/assets/f2bb7354-b801-4551-8322-65e7c9042077" />
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -186,9 +186,7 @@ EXPECTED BEHAVIOR:
 
 ------------------------------------------------------------------TESTBENCH--------------------------------------------------------------------------------
 
-
-<img width="1281" height="403" alt="FWFT_TB" src="https://github.com/user-attachments/assets/18d6a653-0eeb-4810-ac42-7b0e7aace9fa" />
-
+<img width="1281" height="403" alt="FWFT_TB" src="https://github.com/user-attachments/assets/9b13fce4-7528-4e6c-a566-ee3513931ab6" />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
