@@ -1,0 +1,1253 @@
+$date
+   Tue Aug 18 16:40:17 2026
+$end
+
+$version
+  2023.2
+  $dumpfile ("FIFOsyncasync_tb.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module FIFOsyncasync_tb $end
+$var reg 1 ! wclk_sync $end
+$var reg 1 " rclk_sync $end
+$var reg 1 # wclk_async $end
+$var reg 1 $ rclk_async $end
+$var reg 1 % rst_sync $end
+$var reg 1 & rst_async $end
+$var reg 1 ' winc_sync $end
+$var reg 1 ( rinc_sync $end
+$var reg 8 ) wdata_sync [7:0] $end
+$var reg 1 * winc_async $end
+$var reg 1 + rinc_async $end
+$var reg 8 , wdata_async [7:0] $end
+$var wire 8 - rdata_sync [7:0] $end
+$var wire 1 . wfull_sync $end
+$var wire 1 / rempty_sync $end
+$var wire 1 0 almost_full_sync $end
+$var wire 1 1 almost_empty_sync $end
+$var wire 1 2 prog_full_sync $end
+$var wire 1 3 prog_empty_sync $end
+$var wire 8 4 rdata_async [7:0] $end
+$var wire 1 5 wfull_async $end
+$var wire 1 6 rempty_async $end
+$var wire 1 7 almost_full_async $end
+$var wire 1 8 almost_empty_async $end
+$var wire 1 9 prog_full_async $end
+$var wire 1 : prog_empty_async $end
+$scope module DUT_SYNC $end
+$var wire 1 ; wclk $end
+$var wire 1 < rclk $end
+$var wire 1 = rst $end
+$var wire 1 > rinc $end
+$var wire 1 ? winc $end
+$var wire 8 @ wdata [7:0] $end
+$var wire 8 - rdata [7:0] $end
+$var wire 1 . wfull $end
+$var wire 1 / rempty $end
+$var wire 1 0 almost_full $end
+$var wire 1 1 almost_empty $end
+$var wire 1 2 prog_full $end
+$var wire 1 3 prog_empty $end
+$var wire 3 A wbin [2:0] $end
+$var wire 3 B rbin [2:0] $end
+$var wire 3 C wgray [2:0] $end
+$var wire 3 D rgray [2:0] $end
+$var wire 3 E w_rptr2 [2:0] $end
+$var wire 3 F r_wptr2 [2:0] $end
+$var wire 1 G wen $end
+$var wire 1 H ren $end
+$scope module SYNC_MODE.sync_fifo_write_pointer1 $end
+$var wire 1 ; clk $end
+$var wire 1 = rst $end
+$var wire 1 ? winc $end
+$var wire 3 B rbin_sync [2:0] $end
+$var reg 1 I wfull $end
+$var wire 1 0 almost_full $end
+$var wire 1 2 prog_full $end
+$var reg 3 J wbin [2:0] $end
+$var wire 3 K wbinnext [2:0] $end
+$var wire 3 L write_level [2:0] $end
+$var wire 3 M free_space [2:0] $end
+$var wire 1 N wfullval $end
+$var wire 3 O fifo_depth [2:0] $end
+$upscope $end
+$scope module SYNC_MODE.sync_fifo_read_pointer1 $end
+$var wire 1 ; clk $end
+$var wire 1 = rst $end
+$var wire 1 > rinc $end
+$var wire 3 A wbin_sync [2:0] $end
+$var reg 1 P rempty $end
+$var reg 3 Q rbin [2:0] $end
+$var wire 1 1 almost_empty $end
+$var wire 1 3 prog_empty $end
+$var wire 3 R rbinnext [2:0] $end
+$var wire 3 S read_level [2:0] $end
+$var wire 1 T remptyval $end
+$upscope $end
+$scope module fifi_memory1 $end
+$var wire 1 ; wclk $end
+$var wire 1 < rclk $end
+$var wire 1 G wen $end
+$var wire 1 H ren $end
+$var wire 8 @ wdata [7:0] $end
+$var wire 2 U waddr [1:0] $end
+$var wire 2 V raddr [1:0] $end
+$var reg 8 W rdata [7:0] $end
+$upscope $end
+$upscope $end
+$scope module DUT_ASYNC $end
+$var wire 1 X wclk $end
+$var wire 1 Y rclk $end
+$var wire 1 Z rst $end
+$var wire 1 [ rinc $end
+$var wire 1 \ winc $end
+$var wire 8 ] wdata [7:0] $end
+$var wire 8 4 rdata [7:0] $end
+$var wire 1 5 wfull $end
+$var wire 1 6 rempty $end
+$var wire 1 7 almost_full $end
+$var wire 1 8 almost_empty $end
+$var wire 1 9 prog_full $end
+$var wire 1 : prog_empty $end
+$var wire 3 ^ wbin [2:0] $end
+$var wire 3 _ rbin [2:0] $end
+$var wire 3 ` wgray [2:0] $end
+$var wire 3 a rgray [2:0] $end
+$var wire 3 b w_rptr2 [2:0] $end
+$var wire 3 c r_wptr2 [2:0] $end
+$var wire 1 d wen $end
+$var wire 1 e ren $end
+$scope module ASYNC_MODE.async_fifo_write_pointer1 $end
+$var wire 1 X wclk $end
+$var wire 1 \ winc $end
+$var wire 1 Z rst $end
+$var wire 3 b w_rptr2 [2:0] $end
+$var reg 3 f wbin [2:0] $end
+$var reg 3 g wgray [2:0] $end
+$var reg 1 h wfull $end
+$var wire 1 7 almost_full $end
+$var wire 1 9 prog_full $end
+$var wire 3 i wbinnext [2:0] $end
+$var wire 3 j wgraynext [2:0] $end
+$var wire 1 k wfullval $end
+$var wire 3 l fifo_depth [2:0] $end
+$var wire 3 m free_space [2:0] $end
+$var wire 3 n write_level [2:0] $end
+$var reg 3 o rbin_async [2:0] $end
+$var integer 32 p i [31:0] $end
+$upscope $end
+$scope module ASYNC_MODE.async_fifo_read_pointer1 $end
+$var wire 1 Y rclk $end
+$var wire 1 Z rst $end
+$var wire 1 [ rinc $end
+$var wire 3 c r_wptr2 [2:0] $end
+$var reg 3 q rbin [2:0] $end
+$var reg 3 r rgray [2:0] $end
+$var reg 1 s rempty $end
+$var wire 1 8 almost_empty $end
+$var wire 1 : prog_empty $end
+$var wire 3 t rbinnext [2:0] $end
+$var wire 3 u rgraynext [2:0] $end
+$var wire 1 v remptyval $end
+$var reg 3 w wbin_sync [2:0] $end
+$var wire 3 x read_level [2:0] $end
+$var integer 32 y i [31:0] $end
+$upscope $end
+$scope module ASYNC_MODE.async_rptr_sync_wd1 $end
+$var wire 1 X wclk $end
+$var wire 3 a rgray [2:0] $end
+$var wire 1 Z rst $end
+$var reg 3 z w_rptr2 [2:0] $end
+$var reg 3 { w_rptr1 [2:0] $end
+$upscope $end
+$scope module ASYNC_MODE.async_wptr_sync_rd1 $end
+$var wire 1 Y rclk $end
+$var wire 3 ` wgray [2:0] $end
+$var wire 1 Z rst $end
+$var reg 3 | r_wptr2 [2:0] $end
+$var reg 3 } r_wptr1 [2:0] $end
+$upscope $end
+$scope module fifi_memory1 $end
+$var wire 1 X wclk $end
+$var wire 1 Y rclk $end
+$var wire 1 d wen $end
+$var wire 1 e ren $end
+$var wire 8 ] wdata [7:0] $end
+$var wire 2 ~ waddr [1:0] $end
+$var wire 2 !! raddr [1:0] $end
+$var reg 8 "! rdata [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+b0 !!
+0"
+bx "!
+0#
+0$
+1%
+1&
+0'
+0(
+b0 )
+0*
+0+
+b0 ,
+bx -
+0.
+1/
+00
+11
+02
+13
+bx 4
+05
+16
+07
+18
+09
+1:
+0;
+0<
+1=
+0>
+0?
+b0 @
+b0 A
+b0 B
+bz C
+bz D
+bz E
+bz F
+0G
+0H
+0I
+b0 J
+b0 K
+b0 L
+b100 M
+0N
+b100 O
+1P
+b0 Q
+b0 R
+b0 S
+1T
+b0 U
+b0 V
+bx W
+0X
+0Y
+1Z
+0[
+0\
+b0 ]
+b0 ^
+b0 _
+b0 `
+b0 a
+b0 b
+b0 c
+0d
+0e
+b0 f
+b0 g
+0h
+b0 i
+b0 j
+0k
+b100 l
+b100 m
+b0 n
+b0 o
+b11111111111111111111111111111111 p
+b0 q
+b0 r
+1s
+b0 t
+b0 u
+1v
+b0 w
+b0 x
+b11111111111111111111111111111111 y
+b0 z
+b0 {
+b0 |
+b0 }
+b0 ~
+$end
+
+#5000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#7000
+1$
+1Y
+
+#10000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#14000
+0$
+0Y
+
+#15000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#20000
+0!
+0"
+0#
+0%
+0&
+1'
+b10100001 )
+0;
+0<
+0=
+1?
+b10100001 @
+1G
+b1 K
+0X
+0Z
+
+#21000
+1$
+1Y
+
+#25000
+1!
+1"
+1#
+1;
+1<
+b1 A
+b1 J
+b10 K
+b1 L
+b11 M
+b1 S
+0T
+b1 U
+1X
+
+#26000
+b10110010 )
+b10110010 @
+
+#28000
+0$
+0Y
+
+#30000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#35000
+1!
+1"
+1#
+1$
+0/
+10
+12
+1;
+1<
+b10 A
+b10 J
+b11 K
+b10 L
+b10 M
+0P
+b10 S
+b10 U
+1X
+1Y
+
+#36000
+b11000011 )
+b11000011 @
+
+#40000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#42000
+0$
+0Y
+
+#45000
+1!
+1"
+1#
+01
+03
+1;
+1<
+b11 A
+b11 J
+b100 K
+b11 L
+b1 M
+1N
+b11 S
+b11 U
+1X
+
+#46000
+b11010100 )
+b11010100 @
+
+#49000
+1$
+1Y
+
+#50000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#55000
+1!
+1"
+1#
+1.
+1;
+1<
+b100 A
+0G
+1I
+b100 J
+b100 L
+b0 M
+b100 S
+b0 U
+1X
+
+#56000
+0$
+0'
+1*
+b10001 ,
+0?
+0Y
+1\
+b10001 ]
+1d
+b1 i
+b1 j
+
+#60000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#63000
+1$
+1Y
+
+#65000
+1!
+1"
+1#
+1;
+1<
+1X
+b1 ^
+b1 `
+b1 f
+b1 g
+b10 i
+b11 j
+b11 m
+b1 n
+b1 ~
+
+#66000
+b100010 ,
+b100010 ]
+
+#70000
+0!
+0"
+0#
+0$
+0;
+0<
+0X
+0Y
+
+#75000
+1!
+1"
+1#
+17
+19
+1;
+1<
+1X
+b10 ^
+b11 `
+b10 f
+b11 g
+b11 i
+b10 j
+b10 m
+b10 n
+b10 ~
+
+#76000
+b110011 ,
+b110011 ]
+
+#77000
+1$
+1Y
+b11 }
+
+#80000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#84000
+0$
+0Y
+
+#85000
+1!
+1"
+1#
+1;
+1<
+1X
+b11 ^
+b10 `
+b11 f
+b10 g
+b100 i
+b110 j
+1k
+b1 m
+b11 n
+b11 ~
+
+#86000
+b1000100 ,
+b1000100 ]
+
+#90000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#91000
+1$
+1Y
+b11 c
+0v
+b10 w
+b10 x
+b11111111111111111111111111111111 y
+b11 |
+b10 }
+
+#95000
+1!
+1"
+1#
+15
+1;
+1<
+1X
+b100 ^
+b110 `
+0d
+b100 f
+b110 g
+1h
+b0 m
+b100 n
+b0 ~
+
+#96000
+0*
+0\
+
+#98000
+0$
+0Y
+
+#100000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#105000
+1!
+1"
+1#
+1$
+06
+08
+0:
+1;
+1<
+1X
+1Y
+b10 c
+0s
+b11 w
+b11 x
+b11111111111111111111111111111111 y
+b10 |
+b110 }
+
+#110000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#112000
+0$
+0Y
+
+#115000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#119000
+1$
+1Y
+b110 c
+b100 w
+b100 x
+b11111111111111111111111111111111 y
+b110 |
+
+#120000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#125000
+1!
+1"
+1#
+1(
+1;
+1<
+1>
+1H
+b1 R
+1X
+
+#126000
+0$
+0Y
+
+#130000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#133000
+1$
+1Y
+
+#135000
+1!
+1"
+1#
+b10100001 -
+1;
+1<
+b1 B
+b11 L
+b1 M
+0N
+b1 Q
+b10 R
+b11 S
+b1 V
+b10100001 W
+1X
+
+#140000
+0!
+0"
+0#
+0$
+0;
+0<
+0X
+0Y
+
+#145000
+1!
+1"
+1#
+b10110010 -
+0.
+11
+13
+1;
+1<
+b10 B
+0I
+b10 L
+b10 M
+b10 Q
+b11 R
+b10 S
+b10 V
+b10110010 W
+1X
+
+#147000
+1$
+1Y
+
+#150000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#154000
+0$
+0Y
+
+#155000
+1!
+1"
+1#
+b11000011 -
+00
+02
+1;
+1<
+b11 B
+b1 L
+b11 M
+b11 Q
+b100 R
+b1 S
+1T
+b11 V
+b11000011 W
+1X
+
+#160000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#161000
+1$
+1Y
+
+#165000
+1!
+1"
+1#
+0(
+b11010100 -
+1/
+1;
+1<
+0>
+b100 B
+0H
+b0 L
+b100 M
+1P
+b100 Q
+b100 R
+b0 S
+1T
+b0 V
+b11010100 W
+1X
+
+#168000
+0$
+0Y
+
+#170000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#175000
+1!
+1"
+1#
+1$
+1;
+1<
+1X
+1Y
+
+#180000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#182000
+0$
+0Y
+
+#185000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#189000
+1$
+1Y
+
+#190000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#195000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#196000
+0$
+0Y
+
+#200000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#203000
+1$
+1Y
+
+#205000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#210000
+0!
+0"
+0#
+0$
+0;
+0<
+0X
+0Y
+
+#215000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#217000
+1$
+1+
+1Y
+1[
+1e
+b1 t
+b1 u
+
+#220000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#224000
+0$
+0Y
+
+#225000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#230000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#231000
+b1 !!
+b10001 "!
+1$
+b10001 4
+1Y
+b1 _
+b1 a
+b1 q
+b1 r
+b10 t
+b11 u
+b11 x
+
+#235000
+1!
+1"
+1#
+1;
+1<
+1X
+b1 {
+
+#238000
+0$
+0Y
+
+#240000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#245000
+1!
+b10 !!
+1"
+b100010 "!
+1#
+1$
+b100010 4
+18
+1:
+1;
+1<
+1X
+1Y
+b10 _
+b11 a
+b1 b
+0k
+b1 m
+b11 n
+b1 o
+b11111111111111111111111111111111 p
+b10 q
+b11 r
+b11 t
+b10 u
+b10 x
+b1 z
+
+#250000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#252000
+0$
+0Y
+
+#255000
+1!
+1"
+1#
+05
+1;
+1<
+1X
+0h
+b11 {
+
+#259000
+b11 !!
+b110011 "!
+1$
+b110011 4
+1Y
+b11 _
+b10 a
+b11 q
+b10 r
+b100 t
+b110 u
+1v
+b1 x
+
+#260000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#265000
+1!
+1"
+1#
+1;
+1<
+1X
+b11 b
+b10 m
+b10 n
+b10 o
+b11111111111111111111111111111111 p
+b11 z
+b10 {
+
+#266000
+0$
+0Y
+
+#270000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#273000
+b0 !!
+b1000100 "!
+1$
+0+
+b1000100 4
+16
+1Y
+0[
+b100 _
+b110 a
+0e
+b100 q
+b110 r
+1s
+b100 t
+b110 u
+1v
+b0 x
+
+#275000
+1!
+1"
+1#
+07
+09
+1;
+1<
+1X
+b10 b
+b11 m
+b1 n
+b11 o
+b11111111111111111111111111111111 p
+b10 z
+b110 {
+
+#280000
+0!
+0"
+0#
+0$
+0;
+0<
+0X
+0Y
+
+#285000
+1!
+1"
+1#
+1;
+1<
+1X
+b110 b
+b100 m
+b0 n
+b100 o
+b11111111111111111111111111111111 p
+b110 z
+
+#287000
+1$
+1Y
+
+#290000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#294000
+0$
+0Y
+
+#295000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#300000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#301000
+1$
+1Y
+
+#305000
+1!
+1"
+1#
+1;
+1<
+1X
+
+#308000
+0$
+0Y
+
+#310000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#315000
+1!
+1"
+1#
+1$
+1;
+1<
+1X
+1Y
+
+#320000
+0!
+0"
+0#
+0;
+0<
+0X
+
+#322000
+0$
+0Y

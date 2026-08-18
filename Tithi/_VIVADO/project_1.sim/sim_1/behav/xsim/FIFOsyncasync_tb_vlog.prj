@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FIFOsyncasync_top.v" \
+"../../../../async_fifo_read_pointer.v" \
+"../../../../async_fifo_write_pointer.v" \
+"../../../../async_rptr_sync_wd.v" \
+"../../../../async_wptr_sync_rd.v" \
+"../../../../fifi_memory.v" \
+"../../../../sync_fifo_read_pointer.v" \
+"../../../../sync_fifo_write_pointer.v" \
+"../../../../FIFOasncasync_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

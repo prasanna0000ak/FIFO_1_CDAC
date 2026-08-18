@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/FIFOsyncasync_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFOsyncasync_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/async_fifo_read_pointer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_fifo_read_pointer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/async_fifo_write_pointer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_fifo_write_pointer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/async_rptr_sync_wd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_rptr_sync_wd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/async_wptr_sync_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_wptr_sync_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/fifi_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifi_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/sync_fifo_read_pointer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo_read_pointer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/sync_fifo_write_pointer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo_write_pointer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/FIFOasncasync_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFOsyncasync_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FIFO_TOP/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/home/prasanna/Xilinx_workspa/FIFO_TOP/FIFOasncasync_tb.v,1787051242,verilog,,,,FIFOsyncasync_tb,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/FIFOsyncasync_top.v,1787050379,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/async_fifo_read_pointer.v,,FIFOsyncasync_top,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/async_fifo_read_pointer.v,1786965940,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/async_fifo_write_pointer.v,,async_fifo_read_pointer,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/async_fifo_write_pointer.v,1786965942,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/async_rptr_sync_wd.v,,async_fifo_write_pointer,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/async_rptr_sync_wd.v,1786965941,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/async_wptr_sync_rd.v,,async_rptr_sync_wd,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/async_wptr_sync_rd.v,1786965943,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/fifi_memory.v,,async_wptr_sync_rd,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/fifi_memory.v,1787051208,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/sync_fifo_read_pointer.v,,fifi_memory,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/project_1.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/sync_fifo_read_pointer.v,1787051220,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/sync_fifo_write_pointer.v,,sync_fifo_read_pointer,,,,,,,,
+/home/prasanna/Xilinx_workspa/FIFO_TOP/sync_fifo_write_pointer.v,1787051215,verilog,,/home/prasanna/Xilinx_workspa/FIFO_TOP/FIFOasncasync_tb.v,,sync_fifo_write_pointer,,,,,,,,

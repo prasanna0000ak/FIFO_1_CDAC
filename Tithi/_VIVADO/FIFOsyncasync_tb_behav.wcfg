@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="FIFOsyncasync_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="FIFOsyncasync_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="323.001 ns"></ZoomEndTime>
+      <Cursor1Time time="323.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="503"></NameColumnWidth>
+      <ValueColumnWidth column_width="218"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/winc_async">
+      <obj_property name="ElementShortName">winc_async</obj_property>
+      <obj_property name="ObjectShortName">winc_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rinc_async">
+      <obj_property name="ElementShortName">rinc_async</obj_property>
+      <obj_property name="ObjectShortName">rinc_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/wclk_async">
+      <obj_property name="ElementShortName">wclk_async</obj_property>
+      <obj_property name="ObjectShortName">wclk_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rclk_async">
+      <obj_property name="ElementShortName">rclk_async</obj_property>
+      <obj_property name="ObjectShortName">rclk_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rst_async">
+      <obj_property name="ElementShortName">rst_async</obj_property>
+      <obj_property name="ObjectShortName">rst_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/prog_full_async">
+      <obj_property name="ElementShortName">prog_full_async</obj_property>
+      <obj_property name="ObjectShortName">prog_full_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/prog_empty_async">
+      <obj_property name="ElementShortName">prog_empty_async</obj_property>
+      <obj_property name="ObjectShortName">prog_empty_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/almost_empty_async">
+      <obj_property name="ElementShortName">almost_empty_async</obj_property>
+      <obj_property name="ObjectShortName">almost_empty_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/almost_full_async">
+      <obj_property name="ElementShortName">almost_full_async</obj_property>
+      <obj_property name="ObjectShortName">almost_full_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/wfull_async">
+      <obj_property name="ElementShortName">wfull_async</obj_property>
+      <obj_property name="ObjectShortName">wfull_async</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rempty_async">
+      <obj_property name="ElementShortName">rempty_async</obj_property>
+      <obj_property name="ObjectShortName">rempty_async</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/wdata_async">
+      <obj_property name="ElementShortName">wdata_async[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_async[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/rdata_async">
+      <obj_property name="ElementShortName">rdata_async[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_async[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/winc_sync">
+      <obj_property name="ElementShortName">winc_sync</obj_property>
+      <obj_property name="ObjectShortName">winc_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rinc_sync">
+      <obj_property name="ElementShortName">rinc_sync</obj_property>
+      <obj_property name="ObjectShortName">rinc_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/wclk_sync">
+      <obj_property name="ElementShortName">wclk_sync</obj_property>
+      <obj_property name="ObjectShortName">wclk_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rclk_sync">
+      <obj_property name="ElementShortName">rclk_sync</obj_property>
+      <obj_property name="ObjectShortName">rclk_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rst_sync">
+      <obj_property name="ElementShortName">rst_sync</obj_property>
+      <obj_property name="ObjectShortName">rst_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/prog_full_sync">
+      <obj_property name="ElementShortName">prog_full_sync</obj_property>
+      <obj_property name="ObjectShortName">prog_full_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/prog_empty_sync">
+      <obj_property name="ElementShortName">prog_empty_sync</obj_property>
+      <obj_property name="ObjectShortName">prog_empty_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/almost_full_sync">
+      <obj_property name="ElementShortName">almost_full_sync</obj_property>
+      <obj_property name="ObjectShortName">almost_full_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/almost_empty_sync">
+      <obj_property name="ElementShortName">almost_empty_sync</obj_property>
+      <obj_property name="ObjectShortName">almost_empty_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/wfull_sync">
+      <obj_property name="ElementShortName">wfull_sync</obj_property>
+      <obj_property name="ObjectShortName">wfull_sync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/FIFOsyncasync_tb/rempty_sync">
+      <obj_property name="ElementShortName">rempty_sync</obj_property>
+      <obj_property name="ObjectShortName">rempty_sync</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/wdata_sync">
+      <obj_property name="ElementShortName">wdata_sync[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_sync[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/rdata_sync">
+      <obj_property name="ElementShortName">rdata_sync[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_sync[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/datasize">
+      <obj_property name="ElementShortName">datasize[31:0]</obj_property>
+      <obj_property name="ObjectShortName">datasize[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/addressize">
+      <obj_property name="ElementShortName">addressize[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addressize[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/prog_full_thresh">
+      <obj_property name="ElementShortName">prog_full_thresh[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prog_full_thresh[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/FIFOsyncasync_tb/prog_empty_thresh">
+      <obj_property name="ElementShortName">prog_empty_thresh[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prog_empty_thresh[31:0]</obj_property>
+   </wvobject>
+</wave_config>
