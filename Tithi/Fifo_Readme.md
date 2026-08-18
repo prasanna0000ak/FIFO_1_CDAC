@@ -8,7 +8,7 @@ Inputs:
 * winc: Write increment signal (asserts when valid data is presented for writing).
 * rbin_sync: Read pointer from the read side, used to calculate FIFO occupancy and detect the full condition.
 Outputs:
-* wfull: Asserts when write pointer reaches the synchronized read pointer (FIFO completely full, no more writes allowed).
+* wfull: Asserts when the FIFO reaches its full condition, preventing further writes.
 * wbin: Current write pointer in binary format (incremented on every valid write).
 * almost_full: Asserts when free space remaining ≤ 2 locations.
 * prog_full: Programmable full flag; asserts when free space ≤ `prog_full_thresh` (configurable threshold).
@@ -31,10 +31,10 @@ Manages the read pointer and empty-flag logic for a synchronous FIFO. Tracks the
 Inputs:
 * clk, rst: Read domain clock and asynchronous active-high reset.
 * rinc: Read increment signal (asserts when downstream requests data).
-* wbin_sync:Write pointer from the write side, used to calculate FIFO occupancy and detect the empty condition.
+* wbin_sync: Write pointer from the write side, used to calculate FIFO occupancy and detect the empty condition.
 
 Outputs:
-* rempty: Asserts when read pointer equals the synchronized write pointer (FIFO is empty).
+* rempty: Asserts when the FIFO is empty and no valid data is available to read.
 * rbin: Current read pointer in binary format (incremented on every valid read).
 * almost_empty: Asserts when available data ≤ 2 locations.
 * prog_empty: Programmable empty flag; asserts when available data ≤ `prog_empty_thresh` (configurable threshold).
