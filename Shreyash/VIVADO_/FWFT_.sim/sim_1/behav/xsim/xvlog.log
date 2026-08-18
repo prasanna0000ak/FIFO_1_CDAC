@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FWFT_/fwft.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fwft
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FWFT_/fwft_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fwft_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/prasanna/Xilinx_workspa/FWFT_/FWFT_.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
