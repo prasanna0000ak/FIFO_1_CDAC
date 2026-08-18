@@ -15,7 +15,7 @@ Outputs:
 
 Key Logic:
 * wbinnext calculation: Increments `wbin` by 1 when `winc=1` and `wfull=0`, otherwise holds current value.
-* Full detection: Compares next write pointer against inverted MSB of synchronized read pointer. Full when `wbinnext[addressize]` differs and lower bits match read pointer.
+* Full detection: Compares the next write pointer with the read pointer after MSB inversion. Full is asserted when the lower pointer bits match and the MSBs indicate one complete buffer wrap.
 * Free space calculation: `free_space = 2^addressize - (wbin - rbin_sync)`.
 
 Parameters:
@@ -72,13 +72,13 @@ Inputs:
 Outputs:
 * wbin: Current write pointer in binary format.
 * wgray: Current write pointer in Gray code format (used for clock-domain crossing).
-* wfull: Asserts when write pointer (in Gray) equals inverted-MSB version of synchronized read pointer (full condition).
+* wfull: Asserts when the next write pointer (in Gray code) matches the synchronized read pointer with the required MSB inversion for the full condition.
 * almost_full: Asserts when free space ≤ 2.
 * prog_full: Programmable full flag; asserts when free space ≤ `prog_full_thresh`.
 
 Key Logic:
-* Gray code conversion: `wgraynext = wbinnext ^ (wbinnext >> 1)` ensures only 1 bit changes per increment, safe for cross-domain synchronization.
-* Full detection: Compares Gray-coded write pointer against inverted-MSB Gray-coded read pointer. Full when MSBs differ and lower bits match.
+* Gray code conversion: `wgraynext = wbinnext ^ (wbinnext >> 1)` ensures only 1 bit changes between consecutive pointer values, reducing ambiguity during clock-domain crossing.
+* Full detection: Compares the next write Gray pointer with the synchronized read Gray pointer after inversion of the two MSBs. Full is asserted when the remaining Gray-code bits match.
 * Binary-to-Gray conversion: `rbin_async` reconstructs binary value from synchronized Gray pointer using XOR chain.
 * Free space tracking: `free_space = 2^addressize - (wbin - rbin_async)`.
 
@@ -105,7 +105,7 @@ Outputs:
 * prog_empty: Programmable empty flag; asserts when available data ≤ `prog_empty_thresh`.
 
 Key Logic:
-* Gray code conversion: `rgraynext = rbinnext ^ (rbinnext >> 1)` for safe cross-domain communication.
+* Gray code conversion: `rgraynext = rbinnext ^ (rbinnext >> 1)` ensures only 1 bit changes between consecutive pointer values, reducing ambiguity during clock-domain crossing.
 * Empty detection: Compares Gray-coded read pointer directly against synchronized write pointer; empty when equal.
 * Binary-to-Gray conversion: `wbin_sync` reconstructs binary value from synchronized Gray pointer.
 * Read level calculation: `read_level = wbin_sync - rbin`.
@@ -195,7 +195,7 @@ Key Logic:
 * Memory array: `mem[0:(2^addressize)-1]` holds all FIFO entries.
 * Write operation: On `posedge wclk`, if `wen=1`, write `wdata` to `mem[waddr]`.
 * Read operation: On `posedge rclk`, if `ren=1`, read `mem[raddr]` into output register `rdata`.
-* Independent clocks: Write and read can occur simultaneously without interference.
+* Independent clocks: The memory provides separate write and read clock domains, allowing read and write operations to occur independently.
 
 Parameters:
 * `datasize`: Width of data word (8 bits typical).
@@ -249,7 +249,7 @@ Internal Signals:
 Key Instantiations:
 1. Conditional instantiation of sync or async pointer control logic via `generate/if`.
 2. Shared dual-port RAM (`fifi_memory`) used in both modes.
-3. Address mapping: Lower `addressize` bits of pointers feed memory addressing; MSB used for full/empty detection.
+3. Address mapping: Lower `addressize` bits of the binary pointers feed memory addressing, while the additional pointer bit(s) provide wrap/full information.
 
 Parameters:
 * `datasize`: Width of data word (default: 8).
