@@ -6,8 +6,7 @@ Manages the write pointer and full-flag logic for a synchronous FIFO (single-clo
 Inputs:
 * clk, rst: Write domain clock and asynchronous active-high reset.
 * winc: Write increment signal (asserts when valid data is presented for writing).
-* rbin_sync: Synchronized read pointer from the read domain (used to detect fullness condition).
-
+* rbin_sync: Read pointer from the read side, used to calculate FIFO occupancy and detect the full condition.
 Outputs:
 * wfull: Asserts when write pointer reaches the synchronized read pointer (FIFO completely full, no more writes allowed).
 * wbin: Current write pointer in binary format (incremented on every valid write).
