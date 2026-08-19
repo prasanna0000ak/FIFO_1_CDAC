@@ -1,3 +1,60 @@
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+<img width="1066" height="1600" alt="1" src="https://github.com/user-attachments/assets/b7e1fe4e-899c-41eb-817c-fa4bbf900089" />
+
+<img width="1112" height="1600" alt="2" src="https://github.com/user-attachments/assets/52841795-5789-465c-b8ec-195e9c7c1777" />
+
+<img width="1112" height="1600" alt="3" src="https://github.com/user-attachments/assets/353e3500-8f32-43ba-b9c2-c794420ac641" />
+
+<img width="1236" height="1600" alt="4" src="https://github.com/user-attachments/assets/a510c386-0bcf-4a24-94bb-a9a8f61c1258" />
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------RTL_ENCODER---------------------------------------
+
+<img width="1610" height="509" alt="ENC" src="https://github.com/user-attachments/assets/f6dc18c0-93f3-4c94-b2b2-fa0ed7e782c9" />
+
+----------------------------------------RTL_DECODER---------------------------------------
+
+<img width="1621" height="785" alt="DECO" src="https://github.com/user-attachments/assets/ea799263-86a2-4e0c-ab3b-bafe59ba09bd" />
+
+----------------------------------------TESTBENCH---------------------------------------
+
+
+---------------------------------------------------------------
+          STARTING SECDED ECC VERIFICATION TESTBENCH          
+---------------------------------------------------------------
+[TEST 1: NO ERROR]
+  Input Data     : 0xa5
+  Encoded Codeword: 0101000100111
+  Output Data    : 0xa5
+  Flags          : single_err = 0, double_err = 0
+  >> PASS: Clean data received perfectly.
+
+[TEST 2: SINGLE-BIT ERROR]
+  Input Data     : 0x3c
+  Corrupted Word : 1001101110010 (Bit 4 flipped)
+  Corrected Data : 0x3c
+  Flags          : single_err = 1, double_err = 0
+  >> PASS: Single-bit error successfully fixed.
+
+[TEST 3: DOUBLE-BIT ERROR]
+  Input Data     : 0xf0
+  Corrupted Word : 1111000001100 (Two bits flipped)
+  Flags          : single_err = 0, double_err = 1
+  >> PASS: Double-bit uncorrectable fault successfully flagged.
+
+---------------------------------------------------------------
+                     ALL TESTS COMPLETED                      
+---------------------------------------------------------------             
+
+<img width="1480" height="421" alt="TB" src="https://github.com/user-attachments/assets/ebb6de97-be60-45f9-9451-7b3a797fe01f" /><img width="1610" height="509" alt="ENC" src="https://github.com/user-attachments/assets/3bde480c-7933-47eb-ae4a-009d8c637c86" />
+
+----------------------------------------------------------------------
+
+
 ### 1.In Hamming code, we number the bit positions starting from **1**:
 
 | Position |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |
@@ -229,11 +286,11 @@ Then the receiver can **flip/correct the bit at position 7**.
 
 
 -----------------------------------------------------------------------
------------------------------------------------------------------------
+
 In short:
 
 **Position binary → tells WHO checks the bit.**
 **Parity calculation → tells WHETHER there is an error.**
 **Combination of failed parity checks → tells WHERE the error is.**
 -----------------------------------------------------------------------
------------------------------------------------------------------------
+
