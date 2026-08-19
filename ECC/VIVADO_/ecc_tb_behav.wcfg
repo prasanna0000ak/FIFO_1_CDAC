@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ecc_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ecc_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="67.301 ns"></ZoomEndTime>
+      <Cursor1Time time="60.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="186"></NameColumnWidth>
+      <ValueColumnWidth column_width="62"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="array" fp_name="/ecc_tb/data_in">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ecc_tb/ecc_encoded">
+      <obj_property name="ElementShortName">ecc_encoded[12:0]</obj_property>
+      <obj_property name="ObjectShortName">ecc_encoded[12:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ecc_tb/ecc_corrupted">
+      <obj_property name="ElementShortName">ecc_corrupted[12:0]</obj_property>
+      <obj_property name="ObjectShortName">ecc_corrupted[12:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ecc_tb/data_out">
+      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ecc_tb/single_err">
+      <obj_property name="ElementShortName">single_err</obj_property>
+      <obj_property name="ObjectShortName">single_err</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ecc_tb/double_err">
+      <obj_property name="ElementShortName">double_err</obj_property>
+      <obj_property name="ObjectShortName">double_err</obj_property>
+   </wvobject>
+</wave_config>
