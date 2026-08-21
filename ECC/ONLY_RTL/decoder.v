@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
 module decoder(
-    input      [12:0] ecc_in,        // Raw word read from memory
-    output reg [7:0]  data_out,      // Clean/corrected output data
-    output reg        single_err,    // Correctable 1-bit error flag
-    output reg        double_err     // Uncorrectable 2-bit error alert
+    input      [12:0] ecc_in,     
+    output reg [7:0]  data_out,     
+    output reg        single_err,    
+    output reg        double_err     
 );
 
     wire p1    = ecc_in[0];
@@ -38,11 +38,11 @@ module decoder(
 
         if (syndrome == 4'b0000) begin
             if (overall_parity == 1'b1) begin
-                single_err = 1'b1; // Error in Pall bit itself
+                single_err = 1'b1; 
             end
         end else begin
             if (overall_parity == 1'b1) begin
-                single_err = 1'b1; // 1-bit error in data/parity -> correct it
+                single_err = 1'b1; 
                 case (syndrome)
                     4'd3:  data_out[0] = ~d1;
                     4'd5:  data_out[1] = ~d2;
@@ -55,7 +55,7 @@ module decoder(
                     default: data_out = {d8, d7, d6, d5, d4, d3, d2, d1};
                 endcase
             end else begin
-                double_err = 1'b1; // 2-bit uncorrectable fault
+                double_err = 1'b1; 
             end
         end
     end
