@@ -1,13 +1,14 @@
- module async_rptr_sync_wd #(
+module async_rptr_sync_wd #(
 parameter addressize =4
 )(
-input wclk,
-input [addressize:0] rgray,
-input rst,
-output reg [addressize:0] w_rptr2
+input wclk,                              // Write clock
+input [addressize:0] rgray,              // Read pointer in Gray code
+input rst,                               // Reset signal
+output reg [addressize:0] w_rptr2        // Synchronized read pointer in write clock domain
 );
- reg [addressize : 0]w_rptr1;
+reg [addressize : 0]w_rptr1;             // First-stage synchronized read pointer
 
+// Synchronize the read pointer into the write clock domain
 always@(posedge wclk or posedge rst)
 begin
 if(rst)
