@@ -1,7 +1,7 @@
 
 ---------------------Write Width Converter----------------------
 
-Inputs:
+Inputs: 
 
 - wclk, rst: Write domain clock and asynchronous active-high reset. 
 
