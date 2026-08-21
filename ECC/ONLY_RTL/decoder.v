@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 module decoder(
-    input      [12:0] ecc_in,     
-    output reg [7:0]  data_out,     
-    output reg        single_err,    
+    input      [12:0] ecc_in,       
+    output reg [7:0]  data_out,      
+    output reg        single_err, 
     output reg        double_err     
 );
 
@@ -42,7 +42,7 @@ module decoder(
             end
         end else begin
             if (overall_parity == 1'b1) begin
-                single_err = 1'b1; 
+                single_err = 1'b1;
                 case (syndrome)
                     4'd3:  data_out[0] = ~d1;
                     4'd5:  data_out[1] = ~d2;
@@ -55,7 +55,7 @@ module decoder(
                     default: data_out = {d8, d7, d6, d5, d4, d3, d2, d1};
                 endcase
             end else begin
-                double_err = 1'b1; 
+                double_err = 1'b1;
             end
         end
     end
