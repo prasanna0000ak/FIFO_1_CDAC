@@ -32,3 +32,17 @@
 - Developed and tested width-conversion module.
 - Continued FIFO core verification and documentation.
 - Planned ECC implementation and complete project integration.
+
+  Ahh then we should **not overstate the AES work**. Since Week 7 was mostly FIFO completion + periodic assessment, and only a small amount of AES discussion/start-up happened, I'd keep it simple:
+
+### Week 7 — 17 August to 21 August
+
+* Completed the ECC module for the FIFO project and verified its basic functionality.
+* Attended the periodic assessment with the college faculty mentor and presented the project progress.
+* Discussed the overall FIFO design flow and the approach for integrating the completed modules using a common top module.
+* Started the next task on **AES-128 Encryption and Decryption on Zynq-7000**.
+* Briefly reviewed the AES project requirements, team task division and the proposed system architecture.
+* Started understanding the planned AXI flow.
+
+
+
