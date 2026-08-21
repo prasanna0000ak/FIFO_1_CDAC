@@ -9,7 +9,7 @@
 - Continued AXI, SPI and FPGA studies.
 - Attended Arty A7 FPGA board demonstration.
 - Attended CDAC mentor orientation meeting on 18 July.
-
+ 
 ### Week 3 — 20 July to 25 July
 - Studied FIFO architecture and started ASYNC FIFO implementation.
 - Implemented read/write pointer logic with full and empty conditions.
