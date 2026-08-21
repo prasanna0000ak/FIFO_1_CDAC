@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module encoder(
-    input  [7:0]  data_in,      // Raw user data
-    output [12:0] ecc_out       // Encoded word for memory storage
+    input  [7:0]  data_in,     
+    output [12:0] ecc_out     
 );
 
     // Bit mapping:
