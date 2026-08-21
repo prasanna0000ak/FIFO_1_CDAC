@@ -33,8 +33,7 @@
 - Continued FIFO core verification and documentation.
 - Planned ECC implementation and complete project integration.
 
-  Ahh then we should **not overstate the AES work**. Since Week 7 was mostly FIFO completion + periodic assessment, and only a small amount of AES discussion/start-up happened, I'd keep it simple:
-
+  
 ### Week 7 — 17 August to 21 August
 
 * Completed the ECC module for the FIFO project and verified its basic functionality.
