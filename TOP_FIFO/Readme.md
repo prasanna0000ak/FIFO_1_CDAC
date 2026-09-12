@@ -11,7 +11,8 @@
 
 
 7. Concurrent / Simultaneous Streaming Read & Write (fifo_tb8.v)
-Concurrent Read Write Waveform 
+   
+# Concurrent Read Write Waveform - 
 
 - Full-Duplex Streaming Throughput: 
 Both winc and rinc are asserted simultaneously, enabling active writing and reading on every single clock cycle.
@@ -37,7 +38,8 @@ Verified maximum full-duplex streaming throughput with stable flag behavior and 
 
 
 6. Full Threshold & Status Flag Lifecycle (fifo_tb7.v)
-Threshold Flags Waveform 
+   
+# Threshold Flags Waveform - 
 
 - Continuous Fill Burst (30 ns−110 ns): 
 winc writes a continuous burst (10, 20, 30, 40, 50, 60, 70, 80).
@@ -66,7 +68,8 @@ Verified early backpressure warning signals and complete flag lifecycle during c
 
 
 5. Asynchronous Dual-Clock Domain CDC Operation (fifo_tb6.v)
-Asynchronous CDC Waveform 
+   
+# Asynchronous CDC Waveform -
 
 - Independent Asynchronous Clocks: 
 Demonstrates cross-domain operation between independent wclk (Write Clock) and rclk (Read Clock) domains.
@@ -95,7 +98,8 @@ Verified safe cross-clock domain data transfer without metastability, data corru
 
 
 4. Data Width Converter: 8-bit to 32-bit Packing (fifo_tb5.v)
-Width Converter Waveform 
+   
+# Width Converter Waveform -
 
 - Word Packing (40 ns−80 ns):
 Producer writes four 8-bit bytes (11, 22, 33, 44) sequentially into wdata[7:0].
@@ -121,7 +125,8 @@ Verified correct 4:1 multi-cycle word packing and wide 32-bit bus readout withou
 
 
 3. SECDED ECC Protection & Error Monitoring (fifo_tb4.v)
-ECC Waveform 
+   
+# ECC Waveform -
 
 - Hamming (13,8) Encoded Write (40 ns−70 ns):
 Data bytes a5, 3c, and f0 are automatically encoded into 13-bit protected RAM words (8 data bits + 5 parity bits).
@@ -147,7 +152,8 @@ Verified robust memory data protection, automatic 1-bit error correction, and re
 
 
 2. First-Word Fall-Through (FWFT) Show-Ahead Mode (fifo_tb3.v)
-FWFT Waveform 
+   
+# FWFT Waveform -
 
 - Zero-Latency Show-Ahead:
   Unlike standard read mode, when winc writes a1 into an empty FIFO (40 ns−60 ns),
@@ -175,7 +181,7 @@ Verified 0-clock-cycle read latency and immediate valid signal handshaking for h
 
 1. Standard Synchronous Operation & Flag Generation (fifo_tb1.v)
 
-# Synchronous FIFO Waveform 
+# Synchronous FIFO Waveform - 
 
 - Reset & Initialization (0 ns−20 ns):
   rst initializes the FIFO. rempty, almost_empty, and prog_empty are asserted (1).
